@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Watch TV and Movies</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    button {
+      font-size: 2rem;
+      padding: 20px 40px;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #1a73e8;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="location.href='movies.html'">MOVIES</button>
+  <button onclick="location.href='tv.html'">TV</button>
+
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+      if (
+        e.ctrlKey && ['u', 'U', 's', 'S', 'c', 'C'].includes(e.key) ||
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j'].includes(e.key))
+      ) {
+        e.preventDefault();
+      }
+    };
+  </script>
+</body>
+</html>
