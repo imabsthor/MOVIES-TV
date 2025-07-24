@@ -11,22 +11,59 @@
       align-items: center;
       height: 100vh;
       flex-direction: column;
+      flex-wrap: wrap;
+    }
+    .btn-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
     }
     button {
-      font-size: 2rem;
-      padding: 20px 40px;
-      margin: 20px;
+      font-size: 1.1rem;
+      padding: 15px 25px;
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      background-color: #1a73e8;
       color: white;
+      font-weight: bold;
+      transition: transform 0.2s ease, opacity 0.3s ease;
     }
+    button:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+    .movies       { background-color: #1a73e8; }
+    .tv           { background-color: #28a745; }
+    .netflix      { background-color: #e50914; }
+    .vivamax      { background-color: #8e44ad; }
+    .viu          { background-color: #f39c12; }
+    .showmax      { background-color: #ec407a; }
+    .primevideo   { background-color: #0f79af; }
+    .hulu         { background-color: #1ce783; color: #000; }
+    .hoichoi      { background-color: #d32f2f; }
+    .disney       { background-color: #113ccf; }
+    .appletv      { background-color: #333333; }
+    .zee5         { background-color: #ff4081; }
   </style>
 </head>
 <body>
-  <button onclick="location.href='movies.html'">MOVIES</button>
-  <button onclick="location.href='tv.html'">TV</button>
+
+  <div class="btn-container">
+    <button class="movies" onclick="location.href='movies.html'">MOVIES</button>
+    <button class="tv" onclick="location.href='tv.html'">TV</button>
+    <button class="netflix" onclick="location.href='NETFLIX.html'">NETFLIX</button>
+    <button class="vivamax" onclick="location.href='Vivamax.html'">Vivamax</button>
+    <button class="viu" onclick="location.href='Viu.html'">Viu</button>
+    <button class="showmax" onclick="location.href='Showmax.html'">Showmax</button>
+    <button class="primevideo" onclick="location.href='PrimeVideo.html'">Prime Video</button>
+    <button class="hulu" onclick="location.href='Hulu.html'">Hulu</button>
+    <button class="hoichoi" onclick="location.href='Hoichoi.html'">Hoichoi</button>
+    <button class="disney" onclick="location.href='Disney.html'">Disney</button>
+    <button class="appletv" onclick="location.href='AppleTV.html'">Apple TV</button>
+    <button class="zee5" onclick="location.href='Zee5.html'">Zee5</button>
+  </div>
 
   <script>
     document.addEventListener('contextmenu', e => e.preventDefault());
